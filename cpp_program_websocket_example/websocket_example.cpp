@@ -76,7 +76,7 @@ void mainThread(ThreadSafeQueue<std::vector<uchar>> &queue, std::atomic<bool> &r
         header.push("IMAGE_MIDDLE", IMAGE_MIDDLE);
         // header.push("loca", "a");
         // 抽帧图传，当然也可以不抽帧
-        if (camera_image_index % fps_factor == 1 && ws_send_type == 2 && !grayFrame.empty()) {
+        if (camera_image_index % fps_factor == 0 && ws_send_type == 2 && !grayFrame.empty()) {
             std::vector<uchar> buffer;
             cv::imencode(".jpg", grayFrame, buffer);
             header.pack(buffer);
@@ -172,4 +172,5 @@ int main()
     send_thread.join();
     receive_thread.join();
     return 0;
+
 }
