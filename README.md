@@ -2,6 +2,8 @@
 
 上位机基于Node.js开发，通过Websocket进行通信，支持极速光电龙芯/完全模型组别
 
+<img width="432" height="253" alt="26a5eeef0a33d42b31f10c653de3abe3" src="https://github.com/user-attachments/assets/c8c4467b-3972-41e6-bd5b-d065181f2bee" />
+
 ### 特点
 
 - 迁移简单，项目提供了下位机例程，仅需安装Boost和OpenCV即可。
